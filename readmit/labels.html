@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8">
+    <title>KEMP Login Screen</title>
+    <meta content="NOINDEX, NOFOLLOW" name="Robots">
+    <link rel="shortcut icon" href="/lm_auth_proxy?LMimage=favicon.ico" type="image/x-icon"> 
+    <link href="/lm_auth_proxy?LMimage=kmgstyle.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+body
+{
+        font-family:Tahoma,Arial,Helvetica;
+        font-size:70%;
+}
+input, button
+{
+        font-family:Tahoma,Arial,Helvetica;
+}
+
+.mid
+{
+        font-size:70%;
+}
+
+input, button, label, table
+{
+        font-size:100%;
+}
+</style>
+<script>
+function errmsg(x)
+{
+	var	tmp = document.getElementById("badmsg");
+	if(!tmp){
+		alert("missing badmsg");
+		return;
+	}
+	switch(x){
+	case 0:
+		return;
+	case 1:
+		tmp.innerHTML = "Login Failed - The security service has blocked your request. Please contact your System Administrator.<br><br>";
+		break;
+	case 2:
+		tmp.innerHTML = "Login Failed - Please make sure that your Username and Password are correct, and then try again.<br><br>";
+		break;
+	}
+}
+</script>
+</head>
+<body style="font-size:100%">
+<noscript>
+	<div id="dvErr">
+		<table cellpadding="0" cellspacing="0">
+		<tr>
+			<td><img src="/lm_auth_proxy?LMimage=kmgerror.gif" alt=""></td>
+			<td style="width:100%">To use LoadMaster ESP Login, javascript must be enabled in your browser.</td>
+		</tr>
+		</table>
+	</div>
+</noscript>
+<form action="/lm_auth_proxy?LMLogon" method="post" id="logonForm" autocomplete="off">
+<input type="hidden" id="curl" name="curl" value="L2fowaL2fserviceL2esvcL2fsL2fGetFileAttachmentL3fidL3dAAMkADFhYzZkNGU5L4cTZkMDAtNDM1Zi1hYzhmL4cTY2NDY5NTM0NDIxYgBGAAAAAAD3sDdb6GUZTrwhVuMYL2bzL4c8BwDjmkpL2fJGCZSY8xigrkjQFFAAAAAAENAADjmkpL2fJGCZSY8xigrkjQFFAAGOwvZ7AAABEgAQAL4cx0XmIo1ARPlXUYeP9DIOIL3dL26XL2dOWAL2dCANARYL3daBrnu3vL4cE0Cj0aeMyfcL2dQL4cp4a6DgG9UIldewoB42nNjnQHz5QrzfZxYm3oFh9S12lPXE2RlHfHIL2e">
+<table align="center" id="tblMain" cellpadding=0 cellspacing=0>
+	<tr>
+		<td colspan=3>
+		<table cellspacing=0 cellpadding=0 class="tblLgn">
+		<tr><td><img src="/lm_auth_proxy?LMimage=espblank.gif"></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td id="mdLft">&nbsp;</td>
+		<td id="mdMid">
+        <table class="mid">
+        <tbody>
+        <tr>
+          <td class="align">
+              <table cellpadding="0" cellspacing="0">
+               <tr><td><img src=http://www.uhsystem.com/images/systemweblogo290.png><br>Logon Webmail</td></tr>
+              </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="align">
+              <table cellpadding="0" cellspacing="0">
+               <tr><td class="wrng" id="badmsg"></td></tr>
+              </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table cellspacing="0" cellpadding="0">
+              <colgroup>
+              <col class="nowrap">
+              <col class="w100">
+              <col>
+              <tbody>
+                  <tr>
+                    <td class="nowrap"><label for="username">Username:</label></td>
+                    <td class="txtpad">
+                        <input class="txt" id="username" name="username" type="text" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap"><label for="password">Password:</label></td>
+                    <td class="txtpad">
+                        <input class="txt" id="password" type="password" name="password" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">&nbsp;</td>
+                    <td class="txtpad" colspan="2">
+                        <input type="submit" value="Log On" name="submit" /> 
+                    </td>
+                  </tr>
+              </tbody>
+             </table>
+          </td>
+        </tr>
+       </tbody>
+      </table>
+		<table class="mid tblConn">
+			<tr>
+				<td class="tdConn" style="padding-top:0px;">Secured by KEMP LoadMaster</td>
+			</tr>
+			<tr>
+				<td style="font-size:80%;">&copy; 2000-2013 KEMP Technologies Inc. All rights reserved.</td>
+			</tr>
+		</table>
+	</td>
+	<td id="mdRt">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan=3>
+		<table cellspacing=0 cellpadding=0 class="tblLgn">
+		<tr>
+		<td><img src="/lm_auth_proxy?LMimage=espbottom.gif" alt=""></td>
+		</tr></table>
+		</td>
+	</tr>
+ </tbody>
+</table>
+</form>
+<script>errmsg(0);</script>
+</body>
+</html>
